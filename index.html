@@ -12,7 +12,7 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
+  <title>Pride and Prejudice</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -21,6 +21,7 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
+<link href='http://fonts.googleapis.com/css?family=Caudex:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -31,12 +32,45 @@
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 
-<body>
+<body id="index">
   <header>
-
+    <h1>Pride and Prejudice</h1>
+    <h2>by Jane Austen</h2>
   </header>
+  <nav>
+      <ul>
+          <li>
+              <a href="read.html">Read Now</a>
+          </li>
+      </ul>
+  </nav>
   <div role="main">
-
+    <p>
+    Pride and Prejudice is a novel by Jane Austen, first published in 1813. The story follows the main character Elizabeth Bennet as she deals with issues of manners, upbringing, morality, education and marriage in the society of the landed gentry of early 19th-century England. Elizabeth is the second of five daughters of a country gentleman, living near the fictional town of Meryton in Hertfordshire, near London.
+    </p>
+    <p>
+    Though the story is set at the turn of the 19th century, it retains a fascination for modern readers, continuing near the top of lists of 'most loved books'. It has become one of the most popular novels in English literature, and receives considerable attention from literary scholars. Modern interest in the book has resulted in a number of dramatic adaptations and an abundance of novels and stories imitating Austen's memorable characters or themes. To date, the book has sold some 20 million copies worldwide.
+    </p>
+    
+<span class="payment-errors"></span>
+<form action="" method="POST" id="payment-form">
+    <div class="form-row">
+        <label>Card Number</label>
+        <input type="text" size="20" autocomplete="off" class="card-number" />
+    </div>
+    <div class="form-row">
+        <label>CVC</label>
+        <input type="text" size="4" autocomplete="off" class="card-cvc" />
+    </div>
+    <div class="form-row">
+        <label>Expiration (MM/YYYY)</label>
+        <input type="text" size="2" class="card-expiry-month"/>
+        <span> / </span>
+        <input type="text" size="4" class="card-expiry-year"/>
+    </div>
+    <button type="submit" class="submit-button">Submit Payment</button>
+</form>
+    
   </div>
   <footer>
 
@@ -48,6 +82,7 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 
 
   <!-- scripts concatenated and minified via build script -->
